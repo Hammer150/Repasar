@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app" style="background-color:lightsteelblue;">
+        <button class="btn btn-outline-info" v-on:click="accion == accion" v-bind:class="{acc:accion}">Accion</button>
+        <button v-on:click="aventura =! aventura" v-bind:class="{avt:aventura}">Aventura</button>
+        <button v-on:click="animado =! animado" v-bind:class="{anim:animado}">Animada</button>
+        <button v-on:click="fantasia =! fantasia" v-bind:class="{fant:fantasia}">Fantasia</button>
+        <div class="contenedor" v-if="accion">
+            <li v-for="(pelicula, index) of filtrarAccion">
+                {{index}}
+                <h1 v-bind:class="{titulo:ptitulo}">{{pelicula.titulo}}</h1>
+                <p v-bind:class="{descripcion:pdescripcion}">{{pelicula.descripcion}}</p>
+                <h2>{{pelicula.tipo}}</h2>
+                <h3 v-bind:class="{año:añop}">{{pelicula.año}}</h3>
+                <img v-bind:src="pelicula.portada" alt="">
+            </li>
+        </div>
+        <div class="contenedor" v-if="aventura">
+            <li v-for="(pelicula, index) of filtrarAventura">
+                {{index}}
+                <h1 v-bind:class="{titulo:ptitulo}">{{pelicula.titulo}}</h1>
+                <p v-bind:class="{descripcion:pdescripcion}">{{pelicula.descripcion}}</p>
+                <h2>{{pelicula.tipo}}</h2>
+                <h3 v-bind:class="{año:añop}">{{pelicula.año}}</h3>
+                <img v-bind:src="pelicula.portada" alt="">
+            </li>
+        </div>
+        <div class="contenedor" v-if="animado">
+            <li v-for="(pelicula, index) of filtrarAnimado">
+                {{index}}
+                <h1 v-bind:class="{titulo:ptitulo}">{{pelicula.titulo}}</h1>
+                <p v-bind:class="{descripcion:pdescripcion}">{{pelicula.descripcion}}</p>
+                <h2>{{pelicula.tipo}}</h2>
+                <h3 v-bind:class="{año:añop}">{{pelicula.año}}</h3>
+                <img v-bind:src="pelicula.portada" alt="">
+            </li>
+        </div>
+        <div class="contenedor" v-if="fantasia">
+            <li v-for="(pelicula, index) of filtrarFantasia">
+                {{index}}
+                <h1 v-bind:class="{titulo:ptitulo}">{{pelicula.titulo}}</h1>
+                <p v-bind:class="{descripcion:pdescripcion}">{{pelicula.descripcion}}</p>
+                <h2>{{pelicula.tipo}}</h2>
+                <h3 v-bind:class="{año:añop}">{{pelicula.año}}</h3>
+                <img v-bind:src="pelicula.portada" alt="">
+            </li>
+        </div>
+    </div>
+    <script src="node.js"></script>
+    <style>
+        .contenedor {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .titulo {
+            background-color: greenyellow;
+            text-align: center;
+        }
+
+        .descripcion {
+            background-color: grey;
+        }
+
+        .año {
+            background-color: seagreen;
+        }
+
+        .acc {
+            background-color: yellow;
+            text-align: center;
+        }
+
+        .avt {
+            background-color: darkmagenta;
+            text-align: center;
+        }
+
+        .anim {
+            background-color: darkturquoise;
+            text-align: center;
+        }
+
+        .fant {
+            background-color: green;
+            text-align: center;
+        }
+    </style>
+
+</body>
+
+</html>

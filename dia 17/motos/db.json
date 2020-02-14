@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "motos": [
+    {
+      "id_huevo": 2,
+      "titulo": "Maple de Huevo",
+      "descripcion": "Rolon",
+      "precio": 18,
+      "imagen": "https://paralelo32.com.ar/wp-content/uploads/2017/12/huevos.jpg",
+      "id": 2
+    },
+    {
+      "id_huevo": 2,
+      "titulo": "Maple de Huevo",
+      "descripcion": "Rolon",
+      "precio": 18,
+      "imagen": "https://paralelo32.com.ar/wp-content/uploads/2017/12/huevos.jpg",
+      "id": 3
+    },
+    {
+      "id_huevo": 2,
+      "titulo": "Maple de Huevo",
+      "descripcion": "Rolon",
+      "precio": 18,
+      "imagen": "https://paralelo32.com.ar/wp-content/uploads/2017/12/huevos.jpg",
+      "id": 4
+    }
+  ]
+}

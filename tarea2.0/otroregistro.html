@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <input type="text" v-model="correo" placeholder="Agregar nombre">
+        <button v-on:click="{{agregar}}">Agregar</button>
+        <ul v-for="n of nombre">
+            <p>Mensaje: {{n.nombre}}</p>
+        </ul>
+
+    </div>
+
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                titulo: "Registro de Correo",
+                nombre: [],
+                correo:""
+            },
+            computed: {
+                agregar() {
+                    if (this.correo) {
+                        this.nombre.push(
+                            {
+                                nombre: this.correo + "@gmail.com",
+                            }
+                        )
+                    }
+                    this.correo = ""
+                },
+            }
+
+        })
+    </script>
+</body>
+
+</html>
